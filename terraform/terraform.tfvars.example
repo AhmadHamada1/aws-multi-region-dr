@@ -1,0 +1,14 @@
+project_name     = "dr-demo"
+environment      = "prod"
+primary_region   = "us-east-1"
+secondary_region = "eu-west-1"
+
+# Optional: real domain for failover DNS. Leave empty to test with the ALB URLs.
+hosted_zone_id  = ""            # e.g. "Z0123456789ABCDEFGHIJ"
+app_domain_name = ""            # e.g. "app.example.com"
+
+# Optional: receive failover emails (confirm the subscription email from AWS).
+alert_email = ""
+
+# false = Lambda scales compute only; promote the DB yourself with the script.
+auto_promote_database = false
